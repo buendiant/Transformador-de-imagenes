@@ -104,6 +104,5 @@ ImageTransform/
 
 ## 👨‍💻 Autor
 
-**Juan Antonio Buendía Sánchez**  
+**Juan Antonio Buendía Sánchez, Maria Clara Quintero, Juan Pablo Elmasri**  
 Estudiante de Ingeniería de Sistemas — Universidad EAFIT  
-Apasionado por el desarrollo en C++, visión por computadora y procesamiento digital de imágenes.
