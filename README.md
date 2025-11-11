@@ -34,7 +34,7 @@ cd vcpkg
 .\bootstrap-vcpkg.bat
 vcpkg install opencv:x64-windows
 
-⚙️ Configuración del proyecto
+### ⚙️ Configuración del proyecto
 
 Clona este repositorio:
 
@@ -57,7 +57,7 @@ Compila el proyecto:
 
 cmake --build .
 
-▶️ Ejecución
+### ▶️ Ejecución
 
 -Ejecuta el programa desde CLion o desde consola:
 
@@ -77,7 +77,7 @@ Ingrese la ruta completa de la imagen (ejemplo: C:/Users/tuUsuario/imagen.jpg):
 
 Presiona cualquier tecla para cerrar.
 
-🧠 Estructura del proyecto
+### 🧠 Estructura del proyecto
 ImageTransform/
 ├── CMakeLists.txt
 ├── main.cpp
