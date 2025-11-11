@@ -104,5 +104,5 @@ ImageTransform/
 
 ## 👨‍💻 Autor
 
-**Juan Antonio Buendía Sánchez, Maria Clara Quintero, Juan Pablo Elmasri**  
+**Juan Antonio Buendía Sánchez, Maria Clara Quintero, Juan Pablo Parra El-Masri**  
 Estudiante de Ingeniería de Sistemas — Universidad EAFIT  
