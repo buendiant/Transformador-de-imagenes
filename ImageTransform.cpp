@@ -164,6 +164,34 @@ Mat applyWeirdFilter(const Mat& img) {
     return result;
 }
 
+// ---------------- NUEVAS FUNCIONES ------------------
+
+/**
+ * @brief Aplica un filtro de desenfoque Gaussiano.
+ * @param img Imagen de entrada.
+ * @return Imagen con desenfoque.
+ */
+Mat applyBlurFilter(const Mat& img) {
+    Mat result;
+    // (img, result, TamañoKernel, sigmaX)
+    // El tamaño del kernel (tercer argumento) debe ser impar.
+    GaussianBlur(img, result, Size(21, 21), 0);
+    return result;
+}
+
+/**
+ * @brief Rota la imagen usando un código de rotación de OpenCV.
+ * @param img Imagen de entrada.
+ * @param rotateCode Código de rotación (ej. ROTATE_90_CLOCKWISE).
+ * @return Imagen rotada.
+ */
+Mat applyRotation(const Mat& img, int rotateCode) {
+    Mat result;
+    rotate(img, result, rotateCode);
+    return result;
+}
+
+
 // ---------------------- main ----------------------
 
 int main() {
@@ -201,6 +229,9 @@ int main() {
     cout << "4. Filtro sepia\n";
     cout << "5. Filtro verde tipo Matrix\n";
     cout << "6. Filtro extraño\n";
+    cout << "7. Filtro Blur (Desenfoque)\n";
+    cout << "8. Rotar 90 grados (horario)\n";
+    cout << "9. Rotar 180 grados\n";
     cout << "0. Sin filtro (solo mostrar original)\n";
     cout << "Opcion: ";
 
@@ -242,6 +273,25 @@ int main() {
         nombreVentana = "Filtro raro";
         nombreArchivo = "salida_rara.jpg";
         break;
+    
+    // --- NUEVAS OPCIONES ---
+    case 7:
+        resultado = applyBlurFilter(img);
+        nombreVentana = "Filtro Blur";
+        nombreArchivo = "salida_blur.jpg";
+        break;
+    case 8:
+        resultado = applyRotation(img, ROTATE_90_CLOCKWISE);
+        nombreVentana = "Rotada 90";
+        nombreArchivo = "salida_rotada90.jpg";
+        break;
+    case 9:
+        resultado = applyRotation(img, ROTATE_180);
+        nombreVentana = "Rotada 180";
+        nombreArchivo = "salida_rotada180.jpg";
+        break;
+    // -----------------------
+
     case 0:
     default:
         cout << "Mostrando solo la imagen original.\n";
@@ -259,5 +309,5 @@ int main() {
     cout << "Imagen guardada como: " << nombreArchivo << endl;
 
     waitKey(0);
-    return 0;
+    return 0;
 }
